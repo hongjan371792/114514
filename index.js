@@ -1,6 +1,7 @@
 
 require('dotenv').config();
-const { Client, Intents } = require('discord.js');
+const { Client } = require('discord.js');
+const client = new Client();
 const { CommandHandler } = require('djs-commander');
 
 const prefix = '!'; // 你的機器人指令前綴，例如！
