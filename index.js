@@ -1,5 +1,4 @@
 const { Client, Intents } = require('discord.js');
-const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 const prefix = '!'; // 你的機器人指令前綴，例如！
 
 client.on('ready', () => {
