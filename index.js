@@ -1,5 +1,11 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
+const { Client, Intents } = require('discord.js');
+
+const client = new Client({ 
+    intents: [
+        Intents.FLAGS.GUILDS,
+        Intents.FLAGS.GUILD_MESSAGES
+    ]
+});
 const prefix = '!'; // 你的機器人指令前綴，例如！
 
 client.on('ready', () => {
@@ -25,5 +31,6 @@ client.on('message', message => {
     message.channel.send('你個腦殘，現在 ${currentTimeString}')
   }
 });
+
 
 client.login(process.env.DISCORD_TOKEN);
