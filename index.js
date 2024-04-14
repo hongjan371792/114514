@@ -1,6 +1,11 @@
 const { Client, Intents } = require('discord.js');
 const prefix = '!'; // 你的機器人指令前綴，例如！
-
+const client = new Client({ 
+  intents: [
+      Intents.FLAGS.GUILDS,
+      Intents.FLAGS.GUILD_MESSAGES
+  ]
+});
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
