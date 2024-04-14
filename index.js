@@ -1,5 +1,4 @@
 require('dotenv').config();
-const { Client } = require('discord.js');
 const { Client, Intents } = require('discord.js');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.MESSAGE] });
 const { CommandHandler } = require('djs-commander');
