@@ -1,7 +1,9 @@
-const prefix = '!'; // 你的機器人指令前綴，例如！
-const { Client, Intents } = require('discord.js');
 
-const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
+crequire('dotenv').config();
+const { Client, Intents } = require('discord.js');
+const { CommandHandler } = require('djs-commander');
+
+const prefix = '!'; // 你的機器人指令前綴，例如！
 
 ('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
